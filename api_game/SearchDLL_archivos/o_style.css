@@ -1,0 +1,179 @@
+
+/* Document général */
+body
+{
+	background-color: #F1F4F5;
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+}
+
+
+/* CODE ASM */
+
+.o_ASM
+{
+	background-color: White;
+	color: #1F2A2C;
+	padding: 10px;
+	border: 1px #949494 solid;
+	line-height: 14px;
+}
+
+a.o_ligne
+{
+	display: block;
+	background-color: transparent;
+	text-decoration: none;
+	cursor: auto;
+}
+
+a.o_ligne:hover
+{
+	background-color: #EEF5F6;
+}
+
+.o_adresse
+{
+	color: #334973;
+}
+
+.o_proc_1
+{
+	color: #8DA0BC;
+	background-color: #F0F5FB;
+	position: absolute;
+	left: 90px;
+	font-weight: bolder;
+}
+
+.o_called
+{
+	color: #D4A37E;
+	position: absolute;
+	left: 100px;
+}
+
+.o_jmpDest
+{
+	color: #4F4F4F;
+	position: absolute;
+	left: 100px;
+}
+
+.o_jumpH, .o_jumpB
+{
+	color: #4588BA;
+	position: absolute;
+	left: 110px;
+}
+
+.o_opcode
+{
+	color: #638660;
+	position: absolute;
+	left: 125px;
+}
+
+.o_block1, .o_block2, .o_block3, .o_block4
+{
+	color: #BC8DA2;
+	background-color: #F0F5FB;
+	font-weight: bolder;
+	margin-right: 7px;
+}
+
+.o_code
+{
+	color: #3E5230;
+	position: absolute;
+	left: 285px;
+}
+
+.o_nombre
+{
+	color: #004ED9;
+}
+
+.o_reg
+{
+	color: #A49539;
+}
+
+.o_comment
+{
+	color: #4A788A;
+	position: absolute;
+	left: 620px;
+}
+
+.o_cBlock1, .o_cBlock2, .o_cBlock3
+{
+	color: #BCA78D;
+	background-color: #F0F5FB;
+	font-weight: bolder;
+	margin-right: 7px;
+}
+
+.o_cArgAPI
+{
+	color: #7B7B7B;
+}
+
+
+.o_cAPI
+{
+	color: #B04F4F;
+	font-weight: bolder;
+}
+
+
+/* Instructions */
+
+.o_iJump
+{
+	color: #CE090E;
+	font-style: italic;
+	background-color: #F6FFA8;
+}
+
+.o_iJumpC
+{
+	color: #E36100;
+	font-style: italic;
+}
+
+.o_iCall
+{
+	color: #007B17;
+	background-color: #FDFFEA;
+}
+
+.o_iRet
+{
+	color: #9821D8;
+}
+
+.o_iPush
+{
+	color: #678EA2;
+}
+
+.o_iPop
+{
+	color: #976C68;
+}
+
+.o_iInt
+{
+	color: #F2F5FF;
+	background-color: #787A58;
+}
+
+.o_iBad
+{
+	color: #F3FF66;
+	background-color: #F03D00;
+}
+
+
+
