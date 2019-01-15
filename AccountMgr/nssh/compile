@@ -1,3 +1,3 @@
 rm -rf *.o
 gcc -Wall -c *.c
-gcc -Wall -o cgissh *.o -l ssh
+gcc -Wall -o nssh *.o -l ssh

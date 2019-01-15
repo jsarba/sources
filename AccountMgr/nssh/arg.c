@@ -2,13 +2,13 @@
 
 void usage(char *prgname)
 {
-	printf("%s %s (c) 2005 by %s\n\nUsage: %s [options] [hostname] [filename]\n",
+	printf("%s %s (c) 2005 by %s\n\nUsage: %s [options] [hostname] [filename] [login pass] [set pass]\n",
 		PROGRAM, VERSION, AUTHOR, prgname);
   	printf("Options:\n"
     "  -l user : log in as user\n"
     "  -p port : connect to port\n");
 
-  exit(-1);
+  exit(0);
 }
 
 char *GetLastArg(int argc, char **argv)
@@ -27,4 +27,5 @@ char *GetLastArg(int argc, char **argv)
 		return argv[(optind++)+(index++)];
 	else 
 		return NULL;
+		/*@null@*/
 }

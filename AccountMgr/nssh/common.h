@@ -11,4 +11,6 @@
 
 typedef enum boolean { FALSE, TRUE } bool;
 
+char *pass2[2];
+
 #endif

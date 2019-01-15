@@ -12,8 +12,9 @@
 
 static char *magic[] = { "assword:", "New passw", "ssword again:", NULL };
 
-int echoing(void);
-bool GetPass(char *);
-bool Check_Magic(char *, int);
+// bool GetPass(char *);
+// int echoing(void);
+
+int Check_Magic(char *);
 
 #endif

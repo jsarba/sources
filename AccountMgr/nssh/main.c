@@ -31,6 +31,12 @@ int main(int argc, char **argv)
 
 	options_set_host(options, hostname);
 
+	if ( (pass2[0] = GetLastArg(argc, argv)) == NULL )
+		usage(argv[0]);
+
+	if ( (pass2[1] = GetLastArg(argc, argv)) == NULL )
+		usage(argv[0]);
+
 	if ( (sessions = ssh_connect(options)) == NULL )
 	{
 		printf("[!] %s\n", ssh_get_error(NULL));

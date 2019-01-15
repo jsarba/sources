@@ -10,10 +10,9 @@
 #define MAGIC   "\n"
 
 extern int echoing(void);
-extern bool Check_Magic(char *, int);
+extern int Check_Magic(char *);
 
 bool Send_Command(SSH_SESSION *, char *);
-
-static char *pass[] = { "R3c3nt S0ngs", "niseteocurra", NULL };
+bool WritePassword(int, CHANNEL *);
 
 #endif 

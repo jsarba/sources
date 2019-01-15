@@ -27,6 +27,7 @@ int echoing(void)
 	return atom = 1;	
 }
 
+/* dont used */
 bool GetPass(char *pass)
 {
   	unsigned int p;
@@ -50,17 +51,17 @@ bool GetPass(char *pass)
 	}
 }
 
-bool Check_Magic(char *string, int index)
+int Check_Magic(char *string)
 {
-	int i;
-	size_t len=strlen(string);
+	static int j = 0;
+	register int i;
+	size_t len = strlen(string);
+	for (i=0; i < len; i++)
+		if ( strncmp(string+i, magic[j], strlen(magic[j])) == 0 )
+		{
+			j++;
+			break;
+		}
 
-	if ( index > 2 )
-		return FALSE;
-
-	for (i=0; i<len; i++)
-		if ( strncmp(string+i, magic[index], strlen(magic[index])) == 0 )
-			return TRUE;
-
-	return FALSE;
+	return j;
 }

@@ -43,8 +43,8 @@ int handshake(SSH_SESSION *session)
 int authentication(SSH_SESSION *session)
 {
 	SSH_OPTIONS *opt = session->options;
-	char *password;
-	char *issue;
+	// char *password;
+	// char *issue;
 	int auth = 0;
 
 	// try private/public keys first
@@ -63,6 +63,9 @@ int authentication(SSH_SESSION *session)
 		case SSH_AUTH_PARTIAL:
 			// printf("Error: some key matched but you still have to give an other mean of authentication\n");
 
+			printf("\n[!] Dont support password authentication\n");
+			return 0;
+			/*
  			if ( (password = (char *)calloc(MAX_PASS+1, sizeof(char))) == NULL)
 				return 0;
 
@@ -79,6 +82,7 @@ int authentication(SSH_SESSION *session)
 			}
 			memset(password, 0x0, MAX_PASS);
 			free(password);
+			*/
 
 		case SSH_AUTH_SUCCESS:
 			printf("\n[*] Authentication success [%s on %s]\n", opt->username, opt->host);
