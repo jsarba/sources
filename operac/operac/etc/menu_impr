@@ -1,0 +1,4 @@
+SubMenu Colas de Impresion
+Administracion de Impresiones~ adm_lp.sh "${menu[$opcion]}"
+Consulta de Usuario por Impresora~ usu_impre.sh "${menu[$opcion]}"
+Logs~ adm_lp_log.sh "${menu[$opcion]}"

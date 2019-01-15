@@ -1,0 +1,35 @@
+dia=$(date +"%d%m%y")
+tstamp=$(date +"%H%M%S")"${dia}"
+user=$(whoami)"@"$(hostname)
+
+###########################################
+# Sujeto a cambios
+###########################################
+IDENT=${tstamp}" "${user}
+IFACE_DIR=/interfaces
+IFACE_NAME=sicom_central
+
+IFACE_HOME=${IFACE_DIR}/${IFACE_NAME}
+IFACE_S_HOME=${IFACE_HOME}
+
+IFACE_PUBLIC=${IFACE_S_HOME}/publicar
+IFACE_BACKUP=${IFACE_S_HOME}/backup
+
+TREX_DIR=${IFACE_HOME}/trex_dir
+###########################################
+
+# # # #
+TMP=${IFACE_HOME}/tmp
+HISTORY=${IFACE_HOME}/hist
+LOGS=${IFACE_HOME}/logs
+
+HIST_LOG=${HISTORY}/history_${dia}
+FILE_LOG=${LOGS}/${dia}_logs
+
+# # # # 
+# Destinations DIR
+
+IFACE_D_PUBLIC=${IFACE_HOME}/test
+D_TMP=${TMP}
+ 
+# # # # 

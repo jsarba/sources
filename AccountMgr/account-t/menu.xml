@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<ppal>
+	<menu name="Tasks" func="">
+		<submenu name="New" func="task_create()"/>
+		<submenu name="Modify" func="task_modify()"/>
+		<submenu name="Save" func="task_save()"/>
+		<submenu name="Load" func="task_load()"/>
+		<submenu name="Run" func="task_run()"/>
+	</menu>
+	<menu name="Profiles" func="">
+		<submenu name="Create" func="profiles_create()"/>
+		<submenu name="Modify" func="profiles_modify()"/>
+		<submenu name="Delete" func="profile_delete()"/>
+	</menu>
+	<menu name="Directives" func="">
+		<submenu name="Create" func="directives_create()"/>
+		<submenu name="Delete" func="directives_delete()"/>
+	</menu>
+	<menu name="Exit" func="Exit()"/>
+</ppal>

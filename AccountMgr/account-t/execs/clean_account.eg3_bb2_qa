@@ -1,0 +1,4 @@
+< chuser account_locked=false peb8
+chuser account_locked=false peb8
+< chsec -f /etc/security/lastlog -a "unsuccessful_login_count=0" -s peb8
+chsec -f /etc/security/lastlog -a "unsuccessful_login_count=0" -s peb8

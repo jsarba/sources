@@ -1,0 +1,7 @@
+Menu de Operadores (v1.4)
+Monitoreo [+]~ menu.sh ${WORK}/etc/menu_moni "${menu[$opcion]}"
+Backups [+]~ menu.sh ${WORK}/etc/menu_back "${menu[$opcion]}"
+Colas de Impresion [+]~ menu.sh ${WORK}/etc/menu_impr "${menu[$opcion]}"
+Bases de Datos [+]~ menu.sh ${WORK}/etc/menu_db "${menu[$opcion]}"
+Servicios [+]~ menu.sh ${WORK}/etc/menu_svr "${menu[$opcion]}"
+Cambio de Password~ clear; passwd

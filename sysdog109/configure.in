@@ -1,0 +1,130 @@
+AC_INIT(src/main.c)
+PACKAGE="sldog"
+VERSION="0.8.4"
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+AC_PREFIX_DEFAULT(/usr/local)
+
+AC_PROG_CC
+AC_PROG_INSTALL
+
+AC_STDC_HEADERS
+AC_HAVE_HEADERS(string.h sys/user.h sys/types.h sys/ptrace.h sys/syslog.h time.h pthread.h)
+
+dnl "Checks for typedefs, structures, and compiler characteristics."
+AC_C_CONST
+AC_TYPE_PID_T
+AC_TYPE_SIZE_T
+
+dnl "Checks for library functions."
+dnl "AC_FUNC_STAT"
+AC_FUNC_VPRINTF
+AC_CHECK_FUNCS([strtoul])
+AC_CHECK_LIB(pthread, pthread_create)
+
+AC_ARG_WITH(debug, 
+ [AC_HELP_STRING([--with-debug[[=ARG]]], [simple debug use [ARG=simple] or full debug [ARG=full]]) ],
+ [debug_level="$withval"])
+ if test "x$debug_level" = "xsimple" ; then
+	AC_DEFINE(__LEVEL1)
+ elif test "x$debug_level" = "xfull" ; then
+	AC_DEFINE(__LEVEL2)
+ fi
+
+AC_ARG_WITH(oracle_home, 
+ [AC_HELP_STRING([--with-oracle_home[[=ARG]]], [configure ORACLE_HOME path (--enable-oracle needed)]) ],
+ [ORACLE_HOME="$withval"])
+
+
+AC_ARG_WITH(oracle_base, 
+ [AC_HELP_STRING([--with-oracle_base[[=ARG]]], [configure ORACLE_BASE path (--enable-oracle needed)]) ],
+ [ORACLE_BASE="$withval"])
+
+dnl "Custom config"
+AC_ARG_ENABLE(daemon,
+ [AC_HELP_STRING([--enable-daemon], [compile sldog like daemon [default=yes]]) ],
+ [daemon=no] , [daemon=yes] )
+if test "${daemon}" = "no" ; then
+	AC_DEFINE(_NODAEMON)
+fi
+
+AC_ARG_ENABLE(locallog, 
+ [AC_HELP_STRING([--enable-locallog], [enable the events of sldog to keep them into local disk [default=yes]]) ], 
+ [locallog=no], [locallog=yes])
+if test "${locallog}" = "no" ; then
+	AC_DEFINE(_NOLOGLOCAL)
+fi
+
+AC_ARG_ENABLE(logtodb, 
+ [AC_HELP_STRING([--enable-logtodb], [enable the events of sldog to keep them in the data base [default=yes]]) ], 
+ [logtodb=no], [logtodb=yes])
+ if test "${logtodb}" = "no" ; then
+	AC_DEFINE(_NOLOGTODB)
+ fi
+
+AC_ARG_ENABLE(mysql, 
+ [AC_HELP_STRING([--enable-mysql], [enable MySql storage support [default=no]]) ], 
+ [mysql=yes], [mysql=no])
+if test "${mysql}" = "yes" ; then
+ AC_DEFINE(_STORAGE_MYSQL, 1)
+ AC_HAVE_HEADERS(mysql/mysql.h)
+ AC_PATH_PROGS(MYSQL_CONFIG, mysql_config, mysql_config, $PATH:/usr/local/bin)
+ if test ! -x "$MYSQL_CONFIG" ; then
+	echo "You have not mysqlclient package installed";
+	exit -1;
+ fi
+ DB_LIBS=`${MYSQL_CONFIG} --libs`
+ DB_CFLAGS=`${MYSQL_CONFIG} --cflags`
+fi
+
+AC_ARG_ENABLE(mssql, 
+ [AC_HELP_STRING([--enable-mssql], [enable MsSql storage support [default=no]]) ], 
+ [mssql=yes], [mssql=no])
+if test "${mssql}" = "yes" ; then
+ AC_DEFINE(_STORAGE_MSSQL, 1)
+ AC_HAVE_HEADERS(tds.h)
+ DB_LIBS="-L/usr/local/freetds/lib -lsybdb -lnsl"
+# DB_CFLAGS="-I$ORACLE_HOME/rdbms/public/ -I$ORACLE_HOME/rdbms/demo/ -I$ORACLE_HOME/precomp/public"
+fi
+
+AC_ARG_ENABLE(oracle10, 
+ [AC_HELP_STRING([--enable-oracle10], [enable Oracle 10G storage support [default=no]]) ], 
+ [oracle10=yes], [oracle10=no])
+if test "${oracle10}" = "yes" ; then
+ AC_DEFINE(_STORAGE_ORACLE, 1)
+ if test ! -x "$ORACLE_HOME" || test ! -x "$ORACLE_BASE" ; then	
+	echo "You need --with-oracle_base and --with-oracle_home argument complete."
+	exit -1;
+ fi
+ DB_LIBS="-L$ORACLE_HOME/lib/ -lclntsh -lnnz10"
+ DB_CFLAGS="-I$ORACLE_HOME/rdbms/public/ -I$ORACLE_HOME/rdbms/demo/ -I$ORACLE_HOME/precomp/public"
+ AC_DEFINE(_ORACLE10)
+fi
+
+AC_ARG_ENABLE(oracle, 
+ [AC_HELP_STRING([--enable-oracle], [enable Oracle storage support [default=no]]) ], 
+ [oracle=yes], [oracle=no])
+if test "${oracle}" = "yes" ; then
+ AC_DEFINE(_STORAGE_ORACLE, 1)
+ if test ! -x "$ORACLE_HOME" || test ! -x "$ORACLE_BASE" ; then	
+	echo "You need --with-oracle_base and --with-oracle_home argument complete."
+	exit -1;
+ fi
+ DB_LIBS="-L$ORACLE_HOME/lib/ -lclntsh"
+ DB_CFLAGS="-I$ORACLE_HOME/rdbms/public/ -I$ORACLE_HOME/rdbms/demo/ -I$ORACLE_HOME/precomp/public"
+fi
+
+if test ! -x "$prefix" ; then
+	PREFIX=${ac_default_prefix}
+else
+	PREFIX=${prefix} 
+fi
+if test -z "$DB_LIBS" ; then
+	echo "You have not defined storage database (Ej: --enable-mysql)"
+	exit -1;
+fi
+
+AC_SUBST(DB_LIBS)
+AC_SUBST(DB_CFLAGS)
+AC_DEFINE_UNQUOTED(PACKAGE_DIR, "${PREFIX}")
+AC_DEFINE(SYSLOG_NAMES)
+AC_OUTPUT(Makefile src/Makefile etc/Makefile) 

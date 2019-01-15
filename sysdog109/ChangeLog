@@ -1,0 +1,130 @@
+03 de Julio de 2006 ( version 0.8.3 )
+-------------------------------------
+-	El modelo de datos de la tabla de la base cambio la facility y priority por enteros.
+-	Para esto se cambio el valor de retorno de la funcion QPRI y QFAC.
+-	La facility sysdog lleva el numero 999 y fue comprobado que la numeracion(shift) sea la correcta
+
+02 de Abril de 2005 ( Version 0.8.2 )
+-------------------------------------
+-	Reduccion de codigo y optimizacion en la funcion IsAddrPermit()
+- 	ipaddr en estructura de clientes igual a byte orders
+- 	comparacion entre paquetes recibidos y clientes en byte orders
+- 	ipaddr de client guardado en la base de datos en byte orders.
+
+08 de Marzo de 2005 ( Version 0.8.1 )
+-------------------------------------
++ Desarrollo conector oracle
+
+- 	ORACLE_HOME y ORACLE_BASE son seteados con los argumentos --with-oracle_home
+	y --with-oracle_base del configure.
+	Al mismo tiempo se agrega en el script de inicio para que configure dichas variables
+
+- 	Control de errores en la funcion OCILogon, se agrego la funcion checkOCIerror
+	para obtener mas informacion sobre los distintos estados fallidos.
+	La escritura de los errores de la funcion checkOCIerror debe ir si o si al archivo
+	de log y no a la base de datos.
+
+- 	ORACLE probado; 
+	Oracle Client 9i Release 2 ( 9.2.0.4.0 )
+	Oracle Server 8.0.7.0
+
+
+24 de Febrero de 2005  ( version 0.8 )
+--------------------------------------
++ Desarrollo conector oracle
+
+- 	Instalacion del cliente oracle
+
+- 	Connect Timeout definido en el Listener del Servidor Oracle.
+		Ej:
+		- > lsnrctl set connect_timeout 2
+
+- 	Tipo de dato TIMESTAMP reemplazado por date.
+
+- 	Campo autoincrement, manualmente generado por un trigger.
+
+- 	Agregar los datos de la base en el correspondiente $ORA_HOME/network/admin/tnsnames.ora
+
+
+
+15 de Febrero de 2005 ( version 0.7.5b )
+----------------------------------------
+
+-	Cambio de logica para el thread2, quedara esperando el semaphore spools
+	marcado por la funcion TryDbConnect en la variable bool reconnect.
+
+-	Timer para intentar la reconeccion en el thread TryDbConnect, dentro
+	de la condicion de fallas.
+
+
+11 de Enero de 2005 ( version 0.7.4b )
+--------------------------------------
+
+-	Reemplazo del ultimo semwait/sempost por pthread_cond_* para el manejo
+	del spool de disco.
+
+-	La accion reconnect, recarga la configuracion de la base de datos y desconecta
+	de la base para forzar una nueva conexion.
+
+-	La accion reload, solo recarga la lista de clientes.
+
+
+3 de enero de 2005 ( version 0.7.3b )
+-------------------------------------
+
+!-	Al compilarlo con la opcion --disable-daemon y cortando con ctrl+c ni bien
+	termina de ejecutarse, deja al syslogd en STOP (T)
+
+!-	Detectar la falta de espacio en disco de la base de datos.(MySql)
+	El proceso de syslogd y el dog quedan en STOP (T)
+
+-	Configure && Makefile. Definicion variable de librerias requeridas (Ej:mysql)
+
+
+2 de diciembre de 2004 ( version 0.7.1b )
+---------------------------------------
+
+-	Estructuracion en el orden de finalizacion de las tareas de salida.
+	Antes que nada nos detachamos del proceso y luego nos desasemos de los 
+	thread para luego limpiar la memoria y cerrar las conexiones.
+
+-	Organizacion de los archivos headers de los sources.
+
+-	La lista de clientes ya no es recargada ante la caida del damon syslogd.
+	Solo sera recargada ante una peticion manual kill -1 {PID}
+
+-	La carga de la lista de clientes se realiza antes de realizar el attach
+	al daemon de syslogd. De la otra forma al no poder resolver alguno de los
+	clientes genera al syslog un STOP con perdida de datos.
+
+-	Los eventos generados por el SyslogDog son escritos en tiempo real, 
+	conectando, escribiendo y desconectando de la base por cada mensaje emitido.
+
+- 	Convergencia de escritura sobre la funcion 
+	bool MySql_Write(DataToDb *msg, MYSQL *inst); del source mysql.c.
+	Origen del flujo en la funcion 
+	int WriteToDB(DataToDb *message, void *ptr, int inst);
+
+-	Los 2 thread principales; el de spool de disco y memoria utilizando una conexion
+	independiente a las tres principales.
+
+
+6 de diciembre de 2004 ( version 0.7.2b )
+-----------------------------------------
+
+- 	Ciclo de lectura de archivo de clientes utilizando feof() para determinar
+	el final de archivo y evitar un bloqueo.
+
+-	Reemplazo de fgets() por la funcion propietatiaria lread()
+
+-	Reemplazo del nombre static.c por el de msgattr.c
+
+-	Se independizo en net.c y net.h la resolucion de hostnames
+
+-	Creacion del archivo de configuracion con los datos de la base de datos
+	archivo config.c y config.h para el parseo de varias lineas de info
+	La informacion de la base de datos pueder ser recargada igual que se recargan
+	los clientes ( kill -1 {PID} )
+
+-	Organizacion en el checkeo del spool en disco, primero comprueba que no exista
+	el temporal del temporal, y luego verifica el temporal principal

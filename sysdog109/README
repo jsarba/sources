@@ -1,0 +1,12 @@
+TODO:
+=====
+- 	Conector para Oracle 10 
+	Debemos especificar CFLAGS con -D_ORACLE10 al momento.
+	y el ORACLE_HOME en /usr/lib/oracle/xe/app/oracle/product/10.2.0/client/
+	y el ORACLE_BASE en /usr/lib/oracle/xe/app/oracle/product/10.2.0/
+
+-	Conector para la base MsSQL.
+	Usando la libreria FreeTDS
+
+-	Estructura de control para alertas de equipos que dejen de enviar mensajes
+	por cortes de enlaces / red.

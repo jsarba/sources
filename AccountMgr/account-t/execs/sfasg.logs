@@ -1,0 +1,10 @@
+
+[*] Authentication success [peb8 on egarba50_qa]
+< chuser account_locked=false peb8
+< chsec -f /etc/security/lastlog -a "unsuccessful_login_count=0" -s peb8
+[*] Disconnected
+
+[*] Authentication success [peb8 on eg3_bb2_qa]
+< chuser account_locked=false peb8
+< chsec -f /etc/security/lastlog -a "unsuccessful_login_count=0" -s peb8
+[*] Disconnected

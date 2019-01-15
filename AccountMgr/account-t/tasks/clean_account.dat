@@ -1,0 +1,34 @@
+(iclasses
+TaskSave
+p1
+(dp2
+S'tsk_name'
+p3
+S'clean_account'
+p4
+sS'obj'
+p5
+(iclasses
+Object
+p6
+(dp7
+S'value'
+p8
+(dp9
+S'Y'
+S'peb8'
+p10
+ssbsS'cmdlist'
+p11
+(lp12
+(lp13
+S'dp_uy'
+p14
+aS'chuser account_locked=false %Y%'
+p15
+aa(lp16
+S'if_uy'
+p17
+aS'chsec -f /etc/security/lastlog -a "unsuccessful_login_count=0" -s %Y%'
+p18
+aasb.

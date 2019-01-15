@@ -1,0 +1,2 @@
+- Poder modificar los agentes del ApplyPolicy para configurar por ejemplo el eschedule de ejecución
+- Poder ejecutar el ApplyPolicy en un determinado momento para uno o varios o todos los equipos.

@@ -1,0 +1,8 @@
+# Archivo con la informacion para establecer
+# la conexion con la base de datos
+#
+# mantener los permisos 600(root:root)
+#
+# db_server:db_name:db_table:db_user:db_pass
+#
+qam105:sldog:log:sldog:sldog

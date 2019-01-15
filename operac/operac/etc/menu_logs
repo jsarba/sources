@@ -1,0 +1,10 @@
+SubMenu de Logs
+MKSYSB~ mksb_log.sh "${menu[$opcion]}"
+SAVEVG~ svvg_log.sh "${menu[$opcion]}"
+Backup 1/2 dia de la Planta~ bkp_pl_log.sh "${menu[$opcion]}"
+Control Backup todas las Plantas (Solo Egarba50)~ ctrl_bkp_pl_log.sh "${menu[$opcion]}"
+Detalle de Backups de Plantas Lanzados a Mano~ bkp_pl1_log.sh "${menu[$opcion]}"
+Dsmsched~ dsmsched_log.sh "${menu[$opcion]}"
+Dsmerror~ dsmerror_log.sh "${menu[$opcion]}"
+Ultimo Backup TSM del Archive Log~ archivelog_log.sh "${menu[$opcion]}"
+Ultimo Backup Mensual TSM~ tsmmensual_log.sh "${menu[$opcion]}"

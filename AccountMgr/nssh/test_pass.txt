@@ -1,0 +1,10 @@
+# Template para la creacion de usuarios perteneciente a Administracion de Seguridad
+
+< Seteo de contrase#a peb8
+pwdadm peb8
+
+< Reseteo la cantidad de logueos fallidos
+chsec -f /etc/security/lastlog -a "unsuccessful_login_count=0" -s 'peb8'
+
+< Desbloquear la cuenta
+chuser account_locked=false peb8

@@ -1,0 +1,54 @@
+
+[ c ] ### - # Database Details # - ###
+
+Oracle Storage
+==============
+
+- Install oracle_client from Oracle CD PACK
+
+- Create Database with Data Model;
+
+Field		Type					Null	Precision
+-------------------------------------------------
+dia			date(7)   				YES     
+priority    number(10)				NO
+facility    number(10)				NO
+hostname    number(16)				NO
+id          number(22)				NO		0	
+message     varchar2(1048)			YES
+--------------------------------------------------
+
+- Create trigger auto_increment for id field.
+
+
+MySql Storage
+=============
+
+- Install mysql-devel and mysql packages.
+  For RedHat distribution you can force dependencies installation.
+
+- Create Database type MyISAM with Data Model;
+
+Field		Type			Null	key		Extra
+-------------------------------------------------
+date		timestamp(14)	YES		MUL		(index)
+priority	int(10)			NO
+facility	int(10)			NO
+hostname	int(10)			NO
+message		text
+id			bigint(24)unsigned		PRI		auto_increment
+--------------------------------------------------
+
+--- SQL COMMAND ---
+CREATE TABLE `sysdog`.`systemlogs` (
+  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `dia` TIMESTAMP NOT NULL,
+  `priority` INTEGER UNSIGNED NOT NULL,
+  `faciliy` INTEGER UNSIGNED NOT NULL,
+  `hostname` INTEGER UNSIGNED NOT NULL,
+  `message` TEXT NOT NULL,
+   PRIMARY KEY (`id`)
+ )
+      ENGINE = MyISAM
+      CHARACTER SET utf8 COLLATE utf8_general_ci
+---

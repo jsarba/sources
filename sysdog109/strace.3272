@@ -1,0 +1,537 @@
+execve("src/sldog", ["src/sldog"], ["SHELL=/bin/bash", "TERM=linux", "HUSHLOGIN=FALSE", "USER=root", "LS_COLORS=no=00:fi=00:di=01;34:l"..., "MAIL=/var/mail/root", "PATH=/usr/local/sbin:/usr/local/"..., "PWD=/home/jona/dev/sysdog-Jun-1-"..., "LANG=en_US.UTF-8", "PS1=\\h:\\w\\$ ", "SHLVL=1", "HOME=/root", "LS_OPTIONS=--color=auto -a", "LOGNAME=root", "_=/usr/bin/strace", "OLDPWD=/root"]) = 0
+uname({sysname="Linux", nodename="badbox", release="2.6.18-4-686", version="#1 SMP Wed May 9 23:03:12 UTC 2007", machine="i686"}) = 0
+brk(0)                                  = 0x8054000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdc000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat64(3, {st_dev=makedev(254, 0), st_ino=35282, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=64, st_size=31588, st_atime=2009/06/11-06:13:06, st_mtime=2009/05/22-17:30:27, st_ctime=2009/05/22-17:30:27}) = 0
+mmap2(NULL, 31588, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7fd4000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/usr/lib/libmysqlclient.so.15", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\260\237"..., 512) = 512
+fstat64(3, {st_dev=makedev(254, 1), st_ino=19721, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=3792, st_size=1933712, st_atime=2009/06/11-06:13:06, st_mtime=2009/03/03-03:40:46, st_ctime=2009/05/22-13:55:41}) = 0
+mmap2(NULL, 1940288, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7dfa000
+mmap2(0xb7f8f000, 278528, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x194) = 0xb7f8f000
+mmap2(0xb7fd3000, 2880, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7fd3000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/cmov/libpthread.so.0", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\240H\0"..., 512) = 512
+fstat64(3, {st_dev=makedev(254, 0), st_ino=20598, st_mode=S_IFREG|0755, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=178, st_size=89370, st_atime=2009/06/11-06:13:06, st_mtime=2009/01/17-06:59:38, st_ctime=2009/02/20-15:56:50}) = 0
+mmap2(NULL, 70104, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7de8000
+mmap2(0xb7df6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe) = 0xb7df6000
+mmap2(0xb7df8000, 4568, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7df8000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/cmov/libc.so.6", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\240O\1"..., 512) = 512
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7de7000
+fstat64(3, {st_dev=makedev(254, 0), st_ino=20584, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=2438, st_size=1241392, st_atime=2009/06/11-06:13:06, st_mtime=2009/01/17-06:59:34, st_ctime=2009/02/20-15:56:50}) = 0
+mmap2(NULL, 1247388, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7cb6000
+mmap2(0xb7ddd000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x127) = 0xb7ddd000
+mmap2(0xb7de4000, 10396, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7de4000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/cmov/libcrypt.so.1", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0@\10\0\000"..., 512) = 512
+fstat64(3, {st_dev=makedev(254, 0), st_ino=20586, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=46, st_size=21868, st_atime=2009/06/11-06:13:06, st_mtime=2009/01/17-06:59:34, st_ctime=2009/02/20-15:56:50}) = 0
+mmap2(NULL, 184636, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7c88000
+mmap2(0xb7c8d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4) = 0xb7c8d000
+mmap2(0xb7c8f000, 155964, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7c8f000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/cmov/libnsl.so.1", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0p5\0\000"..., 512) = 512
+fstat64(3, {st_dev=makedev(254, 0), st_ino=20590, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=152, st_size=76548, st_atime=2009/06/11-06:13:06, st_mtime=2009/01/17-06:59:36, st_ctime=2009/02/20-15:56:50}) = 0
+mmap2(NULL, 87808, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7c72000
+mmap2(0xb7c84000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11) = 0xb7c84000
+mmap2(0xb7c86000, 5888, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7c86000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/i686/cmov/libm.so.6", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0`3\0\000"..., 512) = 512
+fstat64(3, {st_dev=makedev(254, 0), st_ino=20588, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=286, st_size=145136, st_atime=2009/06/11-06:13:06, st_mtime=2009/01/17-06:59:35, st_ctime=2009/02/20-15:56:50}) = 0
+mmap2(NULL, 147584, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7c4d000
+mmap2(0xb7c70000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22) = 0xb7c70000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/usr/lib/libz.so.1", O_RDONLY)    = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\26"..., 512) = 512
+fstat64(3, {st_dev=makedev(254, 1), st_ino=15748, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=168, st_size=78500, st_atime=2009/06/11-06:13:06, st_mtime=2006/07/08-05:13:43, st_ctime=2009/02/01-10:50:43}) = 0
+mmap2(NULL, 81456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7c39000
+mmap2(0xb7c4c000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x12) = 0xb7c4c000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7c38000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7c37000
+mprotect(0xb7ddd000, 20480, PROT_READ)  = 0
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb7c376c0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+munmap(0xb7fd4000, 31588)               = 0
+set_tid_address(0xb7c37708)             = 4953
+rt_sigaction(SIGRTMIN, {0xb7dec4c0, [], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0xb7dec420, [], SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+uname({sysname="Linux", nodename="badbox", release="2.6.18-4-686", version="#1 SMP Wed May 9 23:03:12 UTC 2007", machine="i686"}) = 0
+rt_sigaction(SIGILL, {0xb7ea6bd0, [ILL], SA_RESTART}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGILL, {SIG_DFL}, {0xb7ea6bd0, [ILL], SA_RESTART}, 8) = 0
+rt_sigaction(SIGILL, {0xb7ea6bd0, [ILL], SA_RESTART}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGILL, {SIG_DFL}, {0xb7ea6bd0, [ILL], SA_RESTART}, 8) = 0
+rt_sigaction(SIGILL, {0xb7ea6bd0, [ILL], SA_RESTART}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGILL, {SIG_DFL}, {0xb7ea6bd0, [ILL], SA_RESTART}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], NULL, 8) = 0
+mmap2(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7436000
+brk(0)                                  = 0x8054000
+brk(0x8075000)                          = 0x8075000
+mprotect(0xb7436000, 4096, PROT_NONE)   = 0
+clone(Process 4954 attached
+child_stack=0xb7c364c4, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED, parent_tidptr=0xb7c36bf8, {entry_number:6, base_addr:0xb7c36bb0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}, child_tidptr=0xb7c36bf8) = 4954
+[pid  4953] lstat64("/usr/local/etc/db-sldog.conf", {st_dev=makedev(254, 1), st_ino=94516, st_mode=S_IFREG|0600, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=8, st_size=215, st_atime=2009/06/11-06:12:55, st_mtime=2009/06/11-05:59:27, st_ctime=2009/06/11-05:59:27}) = 0
+[pid  4953] open("/usr/local/etc/db-sldog.conf", O_RDONLY) = 3
+[pid  4953] fstat64(3, {st_dev=makedev(254, 1), st_ino=94516, st_mode=S_IFREG|0600, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=8, st_size=215, st_atime=2009/06/11-06:12:55, st_mtime=2009/06/11-05:59:27, st_ctime=2009/06/11-05:59:27}) = 0
+[pid  4953] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4953] read(3, "# Archivo con la informacion par"..., 4096) = 215
+[pid  4953] gettimeofday({1244715186, 958800}, NULL) = 0
+[pid  4953] open("/etc/resolv.conf", O_RDONLY) = 4
+[pid  4953] fstat64(4, {st_dev=makedev(254, 0), st_ino=34735, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=2, st_size=163, st_atime=2009/06/11-06:12:56, st_mtime=2009/06/11-05:56:57, st_ctime=2009/06/11-05:56:57}) = 0
+[pid  4953] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fda000
+[pid  4953] read(4, "search dsnsecurity.com\nnameserve"..., 4096) = 163
+[pid  4953] read(4, "", 4096)           = 0
+[pid  4953] close(4)                    = 0
+[pid  4953] munmap(0xb7fda000, 4096)    = 0
+[pid  4953] futex(0xb7de5d08, FUTEX_WAKE, 2147483647) = 0
+[pid  4953] read(3, "", 4096)           = 0
+[pid  4953] close(3)                    = 0
+[pid  4953] munmap(0xb7fdb000, 4096)    = 0
+[pid  4953] open("/etc/nsswitch.conf", O_RDONLY) = 3
+[pid  4953] fstat64(3, {st_dev=makedev(254, 0), st_ino=34532, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=2, st_size=475, st_atime=2009/06/11-06:12:59, st_mtime=2006/08/28-12:33:19, st_ctime=2009/02/01-10:50:18}) = 0
+[pid  4953] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4953] read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 475
+[pid  4953] read(3, "", 4096)           = 0
+[pid  4953] close(3)                    = 0
+[pid  4953] munmap(0xb7fdb000, 4096)    = 0
+[pid  4953] open("/etc/ld.so.cache", O_RDONLY) = 3
+[pid  4953] fstat64(3, {st_dev=makedev(254, 0), st_ino=35282, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=64, st_size=31588, st_atime=2009/06/11-06:13:06, st_mtime=2009/05/22-17:30:27, st_ctime=2009/05/22-17:30:27}) = 0
+[pid  4953] mmap2(NULL, 31588, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7fd4000
+[pid  4953] close(3)                    = 0
+[pid  4953] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/tls/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/tls/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls/i686/cmov", {st_dev=makedev(254, 0), st_ino=20536, st_mode=S_IFDIR|0755, st_nlink=2, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=10, st_size=5120, st_atime=2009/06/10-05:21:09, st_mtime=2009/02/20-15:56:50, st_ctime=2009/02/20-15:56:50}) = 0
+[pid  4953] open("/lib/tls/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls/i686", {st_dev=makedev(254, 0), st_ino=20535, st_mode=S_IFDIR|0755, st_nlink=3, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=2, st_size=1024, st_atime=2009/06/10-05:21:09, st_mtime=2009/02/01-10:52:03, st_ctime=2009/02/01-10:52:03}) = 0
+[pid  4953] open("/lib/tls/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/tls/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/tls/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/tls/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/tls", {st_dev=makedev(254, 0), st_ino=20266, st_mode=S_IFDIR|0755, st_nlink=3, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=10, st_size=5120, st_atime=2009/06/10-05:21:09, st_mtime=2009/02/20-15:56:45, st_ctime=2009/02/20-15:56:45}) = 0
+[pid  4953] open("/lib/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i686/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i686", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib", {st_dev=makedev(254, 0), st_ino=20241, st_mode=S_IFDIR|0755, st_nlink=13, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=14, st_size=7168, st_atime=2009/06/10-05:21:09, st_mtime=2009/05/07-04:40:11, st_ctime=2009/05/07-04:40:11}) = 0
+[pid  4953] open("/usr/lib/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/tls/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/tls/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls/i686/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/tls/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls/i686", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/tls/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/tls/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/tls/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/tls/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/tls", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i686/cmov", {st_dev=makedev(254, 1), st_ino=15774, st_mode=S_IFDIR|0755, st_nlink=2, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=8, st_size=4096, st_atime=2009/06/10-05:19:54, st_mtime=2009/05/07-04:40:14, st_ctime=2009/05/07-04:40:14}) = 0
+[pid  4953] open("/usr/lib/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i686", {st_dev=makedev(254, 1), st_ino=15773, st_mode=S_IFDIR|0755, st_nlink=3, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=8, st_size=4096, st_atime=2009/06/10-05:19:54, st_mtime=2009/02/01-10:51:12, st_ctime=2009/02/01-10:51:12}) = 0
+[pid  4953] open("/usr/lib/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib", {st_dev=makedev(254, 1), st_ino=15745, st_mode=S_IFDIR|0755, st_nlink=81, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=72, st_size=36864, st_atime=2009/06/10-05:19:53, st_mtime=2009/05/22-17:30:21, st_ctime=2009/05/22-17:30:21}) = 0
+[pid  4953] open("/lib/i486-linux-gnu/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/tls/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/tls/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls/i686/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/tls/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls/i686", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/tls/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/tls/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/tls/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/tls/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/tls", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/i686/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/i686", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/i486-linux-gnu/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/lib/i486-linux-gnu", {st_dev=makedev(254, 0), st_ino=20265, st_mode=S_IFDIR|0755, st_nlink=2, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=2, st_size=1024, st_atime=2009/06/10-05:21:09, st_mtime=2007/02/21-10:13:48, st_ctime=2009/02/01-10:50:10}) = 0
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls/i686/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls/i686", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/tls/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/tls", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/i686/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/i686/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/i686/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/i686/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/i686/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/i686/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/i686/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/i686", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/sse2/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/sse2/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/sse2/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/sse2", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/cmov/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu/cmov", 0xbfdc3880) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/usr/lib/i486-linux-gnu/libnss_db.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  4953] stat64("/usr/lib/i486-linux-gnu", {st_dev=makedev(254, 1), st_ino=15941, st_mode=S_IFDIR|0755, st_nlink=2, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=8, st_size=4096, st_atime=2009/06/10-05:19:54, st_mtime=2007/02/21-10:13:48, st_ctime=2009/02/01-10:50:10}) = 0
+[pid  4953] munmap(0xb7fd4000, 31588)   = 0
+[pid  4953] open("/etc/ld.so.cache", O_RDONLY) = 3
+[pid  4953] fstat64(3, {st_dev=makedev(254, 0), st_ino=35282, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=64, st_size=31588, st_atime=2009/06/11-06:13:06, st_mtime=2009/05/22-17:30:27, st_ctime=2009/05/22-17:30:27}) = 0
+[pid  4953] mmap2(NULL, 31588, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7fd4000
+[pid  4953] close(3)                    = 0
+[pid  4953] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  4953] open("/lib/tls/i686/cmov/libnss_files.so.2", O_RDONLY) = 3
+[pid  4953] read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\200\33"..., 512) = 512
+[pid  4953] fstat64(3, {st_dev=makedev(254, 0), st_ino=20593, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=78, st_size=38372, st_atime=2009/06/11-06:13:07, st_mtime=2009/01/17-06:59:36, st_ctime=2009/02/20-15:56:50}) = 0
+[pid  4953] mmap2(NULL, 41620, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb742b000
+[pid  4953] mmap2(0xb7434000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8) = 0xb7434000
+[pid  4953] close(3)                    = 0
+[pid  4953] munmap(0xb7fd4000, 31588)   = 0
+[pid  4953] open("/etc/services", O_RDONLY) = 3
+[pid  4953] fcntl64(3, F_GETFD)         = 0
+[pid  4953] fcntl64(3, F_SETFD, FD_CLOEXEC) = 0
+[pid  4953] fstat64(3, {st_dev=makedev(254, 0), st_ino=34617, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=38, st_size=18274, st_atime=2009/06/11-06:12:57, st_mtime=2007/02/01-21:09:44, st_ctime=2009/02/01-10:51:25}) = 0
+[pid  4953] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4953] read(3, "# Network services, Internet sty"..., 4096) = 4096
+[pid  4953] read(3, "9/tcp\t\t\t\t# Quick Mail Transfer P"..., 4096) = 4096
+[pid  4953] read(3, "otus Note\nlotusnote\t1352/udp\tlot"..., 4096) = 4096
+[pid  4953] close(3)                    = 0
+[pid  4953] munmap(0xb7fdb000, 4096)    = 0
+[pid  4953] rt_sigaction(SIGPIPE, {SIG_IGN}, {SIG_DFL}, 8) = 0
+[pid  4953] socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 3
+[pid  4953] fcntl64(3, F_SETFL, O_RDONLY) = 0
+[pid  4953] fcntl64(3, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(3, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+[pid  4953] connect(3, {sa_family=AF_INET, sin_port=htons(3306), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid  4953] fcntl64(3, F_SETFL, O_RDWR) = 0
+[pid  4953] poll([{fd=3, events=POLLIN|POLLPRI, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(3, SOL_IP, IP_TOS, [8], 4) = 0
+[pid  4953] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid  4953] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid  4953] poll([{fd=3, events=POLLIN, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(3, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(3, "G\0\0\0\n5.0.32-Debian_7etch10-log\0\375"..., 16384) = 75
+[pid  4953] stat64("/usr/share/mysql/charsets/Index.xml", {st_dev=makedev(254, 1), st_ino=146084, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=40, st_size=18221, st_atime=2009/06/11-06:12:56, st_mtime=2009/03/03-03:40:34, st_ctime=2009/05/22-13:56:25}) = 0
+[pid  4953] open("/usr/share/mysql/charsets/Index.xml", O_RDONLY|O_LARGEFILE) = 4
+[pid  4953] read(4, "<?xml version=\'1.0\' encoding=\"ut"..., 18221) = 18221
+[pid  4953] close(4)                    = 0
+[pid  4954] time(NULL)                  = 1244715187
+[pid  4954] open("/etc/localtime", O_RDONLY) = 4
+[pid  4954] fstat64(4, {st_dev=makedev(254, 0), st_ino=34443, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=4, st_size=1267, st_atime=2009/06/11-06:13:06, st_mtime=2009/02/01-11:06:25, st_ctime=2009/02/01-11:06:25}) = 0
+[pid  4954] fstat64(4, {st_dev=makedev(254, 0), st_ino=34443, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=4, st_size=1267, st_atime=2009/06/11-06:13:06, st_mtime=2009/02/01-11:06:25, st_ctime=2009/02/01-11:06:25}) = 0
+[pid  4954] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4954] read(4, "TZif\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0\0\4\0"..., 4096) = 1267
+[pid  4954] close(4)                    = 0
+[pid  4954] munmap(0xb7fdb000, 4096)    = 0
+[pid  4954] open("/usr/local/var/log/sldog.log", O_RDWR|O_APPEND|O_CREAT, 0666) = 4
+[pid  4954] fstat64(4, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=12990, st_atime=2009/06/11-06:12:57, st_mtime=2009/06/11-06:12:57, st_ctime=2009/06/11-06:12:57}) = 0
+[pid  4954] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4954] fstat64(4, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=12990, st_atime=2009/06/11-06:12:57, st_mtime=2009/06/11-06:12:57, st_ctime=2009/06/11-06:12:57}) = 0
+[pid  4954] _llseek(4, 12288, [12288], SEEK_SET) = 0
+[pid  4954] read(4, "x80748e8\n20090611060710:sldog(48"..., 702) = 702
+[pid  4954] write(4, "20090611061307:sldog(4953):start"..., 58) = 58
+[pid  4954] fstat64(4, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=13048, st_atime=2009/06/11-06:13:07, st_mtime=2009/06/11-06:13:07, st_ctime=2009/06/11-06:13:07}) = 0
+[pid  4954] _llseek(4, 12288, [12288], SEEK_SET) = 0
+[pid  4954] read(4, "x80748e8\n20090611060710:sldog(48"..., 4096) = 760
+[pid  4954] close(4)                    = 0
+[pid  4954] munmap(0xb7fdb000, 4096)    = 0
+[pid  4954] write(2, "20090611061307:sldog(4953):start"..., 5820090611061307:sldog(4953):started signal handling thread
+) = 58
+[pid  4954] socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 4
+[pid  4954] fcntl64(4, F_SETFL, O_RDONLY) = 0
+[pid  4954] fcntl64(4, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4954] fcntl64(4, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4954] fcntl64(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+[pid  4954] connect(4, {sa_family=AF_INET, sin_port=htons(3306), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid  4954] fcntl64(4, F_SETFL, O_RDWR) = 0
+[pid  4954] poll([{fd=4, events=POLLIN|POLLPRI, revents=POLLIN}], 1, 1000) = 1
+[pid  4954] setsockopt(4, SOL_IP, IP_TOS, [8], 4) = 0
+[pid  4954] setsockopt(4, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid  4954] poll([{fd=4, events=POLLIN, revents=POLLIN}], 1, 1000) = 1
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] read(4, "G\0\0\0\n5.0.32-Debian_7etch10-log\0\376"..., 16384) = 75
+[pid  4954] brk(0x8096000)              = 0x8096000
+[pid  4954] stat64("/usr/share/mysql/charsets/Index.xml", {st_dev=makedev(254, 1), st_ino=146084, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=40, st_size=18221, st_atime=2009/06/11-06:13:07, st_mtime=2009/03/03-03:40:34, st_ctime=2009/05/22-13:56:25}) = 0
+[pid  4954] open("/usr/share/mysql/charsets/Index.xml", O_RDONLY|O_LARGEFILE) = 5
+[pid  4954] read(5, "<?xml version=\'1.0\' encoding=\"ut"..., 18221) = 18221
+[pid  4954] close(5)                    = 0
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] write(4, "D\0\0\1\215\242\0\0\0\0\0@\10\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 72) = 72
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] read(4, "\7\0\0\2\0\0\0\2\0\0\0", 16384) = 11
+[pid  4954] time(NULL)                  = 1244715187
+[pid  4954] gettimeofday({1244715187, 144583}, NULL) = 0
+[pid  4954] open("/etc/resolv.conf", O_RDONLY) = 5
+[pid  4954] fstat64(5, {st_dev=makedev(254, 0), st_ino=34735, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=0, st_blksize=4096, st_blocks=2, st_size=163, st_atime=2009/06/11-06:13:06, st_mtime=2009/06/11-05:56:57, st_ctime=2009/06/11-05:56:57}) = 0
+[pid  4954] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4954] read(5, "search dsnsecurity.com\nnameserve"..., 4096) = 163
+[pid  4954] read(5, "", 4096)           = 0
+[pid  4954] close(5)                    = 0
+[pid  4954] munmap(0xb7fdb000, 4096)    = 0
+[pid  4954] poll([{fd=4, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] write(4, "\1\0\0\0\16", 5)  = 5
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] read(4, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+[pid  4954] poll([{fd=4, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] write(4, "\255\0\0\0\3INSERT INTO sysdog.systemlo"..., 177) = 177
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] read(4, "\7\0\0\1\0\1\r\2\0\0\0", 16384) = 11
+[pid  4954] poll([{fd=4, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] write(4, "\1\0\0\0\16", 5)  = 5
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] read(4, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+[pid  4954] poll([{fd=4, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4954] setsockopt(4, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4954] write(4, "\1\0\0\0\1", 5)   = 5
+[pid  4954] shutdown(4, 2 /* send and receive */) = 0
+[pid  4954] close(4)                    = 0
+[pid  4954] rt_sigtimedwait([HUP TTIN],  <unfinished ...>
+[pid  4953] setsockopt(3, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(3, "D\0\0\1\215\242\0\0\0\0\0@\10\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 72) = 72
+[pid  4953] setsockopt(3, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(3, "\7\0\0\2\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 4
+[pid  4953] fcntl64(4, F_SETFL, O_RDONLY) = 0
+[pid  4953] fcntl64(4, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(4, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+[pid  4953] connect(4, {sa_family=AF_INET, sin_port=htons(3306), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid  4953] fcntl64(4, F_SETFL, O_RDWR) = 0
+[pid  4953] poll([{fd=4, events=POLLIN|POLLPRI, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(4, SOL_IP, IP_TOS, [8], 4) = 0
+[pid  4953] setsockopt(4, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid  4953] setsockopt(4, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid  4953] poll([{fd=4, events=POLLIN, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(4, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(4, "G\0\0\0\n5.0.32-Debian_7etch10-log\0\377"..., 16384) = 75
+[pid  4953] setsockopt(4, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(4, "D\0\0\1\215\242\0\0\0\0\0@\10\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 72) = 72
+[pid  4953] setsockopt(4, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(4, "\7\0\0\2\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 5
+[pid  4953] fcntl64(5, F_SETFL, O_RDONLY) = 0
+[pid  4953] fcntl64(5, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(5, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(5, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+[pid  4953] connect(5, {sa_family=AF_INET, sin_port=htons(3306), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid  4953] fcntl64(5, F_SETFL, O_RDWR) = 0
+[pid  4953] poll([{fd=5, events=POLLIN|POLLPRI, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(5, SOL_IP, IP_TOS, [8], 4) = 0
+[pid  4953] setsockopt(5, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid  4953] setsockopt(5, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid  4953] poll([{fd=5, events=POLLIN, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(5, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(5, "G\0\0\0\n5.0.32-Debian_7etch10-log\0\0"..., 16384) = 75
+[pid  4953] setsockopt(5, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(5, "D\0\0\1\215\242\0\0\0\0\0@\10\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 72) = 72
+[pid  4953] setsockopt(5, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(5, "\7\0\0\2\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] time(NULL)                  = 1244715187
+[pid  4953] open("/usr/local/var/log/sldog.log", O_RDWR|O_APPEND|O_CREAT, 0666) = 6
+[pid  4953] fstat64(6, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=13048, st_atime=2009/06/11-06:13:07, st_mtime=2009/06/11-06:13:07, st_ctime=2009/06/11-06:13:07}) = 0
+[pid  4953] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4953] fstat64(6, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=13048, st_atime=2009/06/11-06:13:07, st_mtime=2009/06/11-06:13:07, st_ctime=2009/06/11-06:13:07}) = 0
+[pid  4953] _llseek(6, 12288, [12288], SEEK_SET) = 0
+[pid  4953] read(6, "x80748e8\n20090611060710:sldog(48"..., 760) = 760
+[pid  4953] write(6, "20090611061307:sldog(4953):3 DB "..., 56) = 56
+[pid  4953] fstat64(6, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=13104, st_atime=2009/06/11-06:13:07, st_mtime=2009/06/11-06:13:07, st_ctime=2009/06/11-06:13:07}) = 0
+[pid  4953] _llseek(6, 12288, [12288], SEEK_SET) = 0
+[pid  4953] read(6, "x80748e8\n20090611060710:sldog(48"..., 4096) = 816
+[pid  4953] close(6)                    = 0
+[pid  4953] munmap(0xb7fdb000, 4096)    = 0
+[pid  4953] write(2, "20090611061307:sldog(4953):3 DB "..., 5620090611061307:sldog(4953):3 DB Connections established
+) = 56
+[pid  4953] socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 6
+[pid  4953] fcntl64(6, F_SETFL, O_RDONLY) = 0
+[pid  4953] fcntl64(6, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(6, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(6, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+[pid  4953] connect(6, {sa_family=AF_INET, sin_port=htons(3306), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid  4953] fcntl64(6, F_SETFL, O_RDWR) = 0
+[pid  4953] poll([{fd=6, events=POLLIN|POLLPRI, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(6, SOL_IP, IP_TOS, [8], 4) = 0
+[pid  4953] setsockopt(6, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid  4953] poll([{fd=6, events=POLLIN, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(6, "G\0\0\0\n5.0.32-Debian_7etch10-log\0\1"..., 16384) = 75
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(6, "D\0\0\1\215\242\0\0\0\0\0@\10\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 72) = 72
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(6, "\7\0\0\2\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] time(NULL)                  = 1244715187
+[pid  4953] poll([{fd=6, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(6, "\1\0\0\0\16", 5)  = 5
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(6, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] poll([{fd=6, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(6, "\253\0\0\0\3INSERT INTO sysdog.systemlo"..., 175) = 175
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(6, "\7\0\0\1\0\1\16\2\0\0\0", 16384) = 11
+[pid  4953] poll([{fd=6, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(6, "\1\0\0\0\16", 5)  = 5
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(6, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] poll([{fd=6, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(6, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(6, "\1\0\0\0\1", 5)   = 5
+[pid  4953] shutdown(6, 2 /* send and receive */) = 0
+[pid  4953] close(6)                    = 0
+[pid  4953] open("/usr/local/var/spool/sldog/msg.spool", O_RDWR|O_APPEND|O_CREAT, 0666) = 6
+[pid  4953] mmap2(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb6c2a000
+[pid  4953] mprotect(0xb6c2a000, 4096, PROT_NONE) = 0
+[pid  4953] clone(Process 4955 attached
+child_stack=0xb742a4c4, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED, parent_tidptr=0xb742abf8, {entry_number:6, base_addr:0xb742abb0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}, child_tidptr=0xb742abf8) = 4955
+[pid  4953] mmap2(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb6429000
+[pid  4953] mprotect(0xb6429000, 4096, PROT_NONE) = 0
+[pid  4953] clone(Process 4956 attached
+child_stack=0xb6c294c4, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED, parent_tidptr=0xb6c29bf8, {entry_number:6, base_addr:0xb6c29bb0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}, child_tidptr=0xb6c29bf8) = 4956
+[pid  4953] time(NULL)                  = 1244715187
+[pid  4953] open("/usr/local/var/log/sldog.log", O_RDWR|O_APPEND|O_CREAT, 0666) = 7
+[pid  4953] fstat64(7, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=13104, st_atime=2009/06/11-06:13:07, st_mtime=2009/06/11-06:13:07, st_ctime=2009/06/11-06:13:07}) = 0
+[pid  4953] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4953] fstat64(7, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=13104, st_atime=2009/06/11-06:13:07, st_mtime=2009/06/11-06:13:07, st_ctime=2009/06/11-06:13:07}) = 0
+[pid  4953] _llseek(7, 12288, [12288], SEEK_SET) = 0
+[pid  4953] read(7, "x80748e8\n20090611060710:sldog(48"..., 816) = 816
+[pid  4953] write(7, "20090611061307:sldog(4953):Loadi"..., 53) = 53
+[pid  4953] fstat64(7, {st_dev=makedev(254, 1), st_ino=79317, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=32, st_size=13157, st_atime=2009/06/11-06:13:07, st_mtime=2009/06/11-06:13:07, st_ctime=2009/06/11-06:13:07}) = 0
+[pid  4953] _llseek(7, 12288, [12288], SEEK_SET) = 0
+[pid  4953] read(7, "x80748e8\n20090611060710:sldog(48"..., 4096) = 869
+[pid  4953] close(7)                    = 0
+[pid  4953] munmap(0xb7fdb000, 4096)    = 0
+[pid  4953] write(2, "20090611061307:sldog(4953):Loadi"..., 5320090611061307:sldog(4953):Loading ip client list...
+) = 53
+[pid  4953] socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 7
+[pid  4953] fcntl64(7, F_SETFL, O_RDONLY) = 0
+[pid  4953] fcntl64(7, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(7, F_GETFL)         = 0x2 (flags O_RDWR)
+[pid  4953] fcntl64(7, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+[pid  4953] connect(7, {sa_family=AF_INET, sin_port=htons(3306), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid  4953] fcntl64(7, F_SETFL, O_RDWR) = 0
+[pid  4953] poll([{fd=7, events=POLLIN|POLLPRI, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(7, SOL_IP, IP_TOS, [8], 4) = 0
+[pid  4953] setsockopt(7, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid  4953] poll([{fd=7, events=POLLIN, revents=POLLIN}], 1, 1000) = 1
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(7, "G\0\0\0\n5.0.32-Debian_7etch10-log\0\2"..., 16384) = 75
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(7, "D\0\0\1\215\242\0\0\0\0\0@\10\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 72) = 72
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(7, "\7\0\0\2\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] time(NULL)                  = 1244715187
+[pid  4953] poll([{fd=7, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(7, "\1\0\0\0\16", 5)  = 5
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(7, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] poll([{fd=7, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(7, "\250\0\0\0\3INSERT INTO sysdog.systemlo"..., 172) = 172
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(7, "\7\0\0\1\0\1\17\2\0\0\0", 16384) = 11
+[pid  4953] poll([{fd=7, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(7, "\1\0\0\0\16", 5)  = 5
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] read(7, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+[pid  4953] poll([{fd=7, events=POLLIN|POLLPRI}], 1, 0) = 0
+[pid  4953] setsockopt(7, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+[pid  4953] write(7, "\1\0\0\0\1", 5)   = 5
+[pid  4953] shutdown(7, 2 /* send and receive */) = 0
+[pid  4953] close(7)                    = 0
+[pid  4953] open("/usr/local/etc/cip-sldog.conf", O_RDONLY) = 7
+[pid  4953] fstat64(7, {st_dev=makedev(254, 1), st_ino=94502, st_mode=S_IFREG|0644, st_nlink=1, st_uid=0, st_gid=50, st_blksize=4096, st_blocks=8, st_size=508, st_atime=2009/06/11-06:12:58, st_mtime=2009/05/20-11:44:56, st_ctime=2009/05/20-11:44:56}) = 0
+[pid  4953] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7fdb000
+[pid  4953] _llseek(7, 0, [0], SEEK_SET) = 0
+[pid  4953] read(7, "# \n# {IP_ADDRESS}:{DATABASE}:{RW"..., 4096) = 508
+[pid  4953] read(7, "", 4096)           = 0
+[pid  4953] close(7)                    = 0
+[pid  4953] munmap(0xb7fdb000, 4096)    = 0
+[pid  4953] --- SIGSEGV (Segmentation fault) @ 0 (0) ---
+[pid  4954] <... rt_sigtimedwait resumed> 0xb7c363cc) = -1 EINTR (Interrupted system call)
+[pid  4955] +++ killed by SIGSEGV +++
+Process 4955 detached
+[pid  4956] +++ killed by SIGSEGV +++
+Process 4956 detached
+[pid  4954] +++ killed by SIGSEGV +++
+Process 4954 detached
+Process 4953 detached

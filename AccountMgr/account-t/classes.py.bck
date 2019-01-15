@@ -1,0 +1,57 @@
+import dialog
+
+class Object:
+	name = {}
+	value = {}
+	def __init__(self):
+		Object.name['X'] = "Group"
+		Object.name['Y'] = "Username"
+		Object.name['Z'] = "Profile"
+		Object.name['W'] = "Password"
+		Object.name['N'] = "Full name"
+
+	def add_value(self, obj, val):
+		self.value[obj] = val
+	
+	def del_value(self, obj):
+		del self.value[obj]
+
+class initScreen:
+	def __init__(self):
+		self.d = dialog.Dialog(dialog="dialog", compat="dialog")
+
+	def makemenu(self, st, t, h, mh, w, cs):
+		return self.d.menu(st, height=h, menu_height=mh, width=w, choices=(cs), title=t)
+
+class InstanceWM(initScreen):
+	def __init__(self):
+		self.h = 0
+		initScreen.__init__(self)
+
+	def tittle(self, name):
+		self.d.add_persistent_args(["--backtitle", name])
+
+	def SimpleMenu(self, topmenu, subhead, header,  w):
+		submenu = []
+		mh = len(topmenu)
+		h = mh + 7
+		for menu in topmenu:
+			submenu.extend([[ menu[0], ""]])
+
+		if subhead:
+			subhead = "Actual task:%s" % subhead
+
+		(self.code, self.tag ) = self.makemenu(subhead, header, h, mh, w, submenu)
+
+	def MultiMenu(self, topmenu, subhead, header, w):
+		mh = len(topmenu)
+		if self.h == 0:
+			self.h = mh + 8	
+		return self.makemenu(subhead, header, self.h, mh, w, topmenu)
+
+	def key_handle(self):
+		d = self.d	# shorcut
+		if self.code in (d.DIALOG_CANCEL, d.DIALOG_ESC):
+			return 0
+		else:
+			return self.tag

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<perfiles>
+	<perfil clave="operac">
+		<name>Operaciones</name>
+		<pgrp>operac</pgrp>
+		<groups>printq,staff</groups>
+		<home>/home/operac</home>
+		<shell>/home/operac/.inioper.sh</shell>	
+	</perfil>
+	<perfil clave="admsec">
+		<name>Administracion Seguridad</name>
+		<pgrp>admsec</pgrp>
+		<groups>staff,security,cron,printq,operac,admsop,gpasajes</groups>
+		<admin>true</admin>
+		<roles>ManageBasicUsers,ManageAllUsers,ManageBasicPasswds,ManageAllPasswds,ManageRoles</roles>
+	</perfil>
+	<perfil clave="admsop">
+		<name>Soporte UNIX</name>
+		<pgrp>admsop</pgrp>
+		<groups>staff,printq,operac,gpasajes</groups>
+		<admin>true</admin>
+	</perfil>
+</perfiles>

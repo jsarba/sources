@@ -1,0 +1,7 @@
+SubMenu de Backup
+Mksysb~ mksb.sh "${menu[$opcion]}"
+Savevg~ svvg.sh "${menu[$opcion]}"
+(TSM Archive logs de las Bases)~
+Backup 1/2 dia Planta~ bkp_pl.sh "${menu[$opcion]}"
+(Copia "tar" a cinta)~
+Logs [+]~ menu.sh ${WORK}/etc/menu_logs "${menu[$opcion]}"

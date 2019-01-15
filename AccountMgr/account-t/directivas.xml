@@ -1,0 +1,44 @@
+<!--
+	Objetos:
+		%X% Grupo
+		%Y% Usuario
+		%Z% Perfil
+		%W% Password
+		%N% Full Name
+-->
+<directives>
+	<directive clave="agxuy">
+		<name>Agregar grupo %X% a usuario %Y%</name>
+		<cmd>lsuser -a groups %Y% | grep %X% || chuser `lsuser -a groups %Y% | awk '{print $2}'`,%X% %Y%</cmd>
+	</directive>
+
+	<directive clave="cuypz">
+		<name>Crear usuario %Y%(%N%) con perfil %Z%</name>
+		<cmd>mkuser -a %Z% gecos='%N%' %Y%</cmd>
+	</directive>
+
+	<directive clave="apwuy">
+		<name>Asignar password %W% a usuario %Y%</name>
+		<cmd>pwdadm %Y%</cmd>
+	</directive>
+
+	<directive clave="apzuy">
+		<name>Asignar perfil %Z% a usuario %Y%</name>
+		<cmd>chuser %Z% %Y%</cmd>
+	</directive>
+
+	<directive clave="dp_uy">
+		<name>Desbloquear usuario %Y%</name>
+		<cmd>chuser account_locked=false %Y%</cmd>
+	</directive>
+
+	<directive clave="bp_uy">
+		<name>Bloquear usuario %Y%</name>
+		<cmd>chuser account_locked=true %Y%</cmd>
+	</directive>
+
+	<directive clave="if_uy">
+		<name>Limpiar intentos fallidos usuario %Y%</name>
+		<cmd>chsec -f /etc/security/lastlog -a "unsuccessful_login_count=0" -s %Y%</cmd>
+	</directive>
+</directives>

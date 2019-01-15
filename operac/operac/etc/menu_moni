@@ -1,0 +1,5 @@
+SubMenu de Monitoreo
+Filesystem~ clear; df -k | pg
+Performance~ clear; echo "* Ctrl+C * Volver"; vmstat 1
+Usuarios Logueados~ clear; who|pg
+Procesos~ clear;ps -fe| sort -n +7 +8| pg

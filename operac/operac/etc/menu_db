@@ -1,0 +1,4 @@
+SubMenu de Bases de Datos
+Listar estado de bases~ list_db.sh "${menu[$opcion]}"
+Subir Bases~ action_db.sh "${menu[$opcion]}" "subir"
+Bajar Bases~ action_db.sh "${menu[$opcion]}" "bajar"

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<servers>
+	<server clave="egarba50"> <port>1004</port> </server>
+	<server clave="egarba52"> <port>1004</port> </server>
+	<server clave="egarba53"> <port>22</port> </server>
+	<server clave="egarba54"> <port>22</port> </server>
+	<server clave="eg3_bb1"> <port>1004</port> </server>
+	<server clave="eg3_cam"> <port>1004</port> </server>
+	<server clave="eg3_sl"> <port>1004</port> </server>
+	<server clave="eg3_ds1"> <port>1004</port> </server>
+	<server clave="egarba50_qa"> <port>1004</port> </server>
+	<server clave="eg3_bb2_qa"> <port>1004</port> </server>
+	<server clave="eg3_bck"> <port>1004</port> </server>
+</servers>

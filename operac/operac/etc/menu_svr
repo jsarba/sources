@@ -1,0 +1,3 @@
+SubMenu de SERVICIOS
+Restart TSM~ action_tsm.sh "${menu[$opcion]}" "restart"
+Restart LISTENER~ action_lo.sh "${menu[$opcion]}" "restart"
